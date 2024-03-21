@@ -7,6 +7,25 @@ public class Atendimento {
     private int sala;
     private ArrayList<Integer> predio;
 
+    public String getNomeProfessor() {
+        return nomeProfessor;
+    }
+
+    public String getHorarioAtendimento() {
+        return horarioAtendimento;
+    }
+
+    public String getPeriodo() {
+        return periodo;
+    }
+
+    public int getSala() {
+        return sala;
+    }
+
+    public ArrayList<Integer> getPredio() {
+        return predio;
+    }
 /*
 1: 1 - 5
 2: 6 - 10
@@ -44,4 +63,6 @@ public class Atendimento {
         
         return predio;
     }
+
+   
 }
