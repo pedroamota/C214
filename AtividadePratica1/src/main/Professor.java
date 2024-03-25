@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Atendimento {
+public class Professor {
     private String nomeProfessor;
     private String horarioAtendimento;
     private String periodo;
@@ -26,16 +26,8 @@ public class Atendimento {
     public ArrayList<Integer> getPredio() {
         return predio;
     }
-/*
-1: 1 - 5
-2: 6 - 10
-3: 11 - 15
-4: 16 - 20
-5: 21 - 25
-6: 26 - 30
- */
 
-    public Atendimento(String nomeProfessor, String horarioAtendimento, String periodo, int sala,
+    public Professor(String nomeProfessor, String horarioAtendimento, String periodo, int sala,
             ArrayList<Integer> predio) {
         this.nomeProfessor = nomeProfessor;
         this.horarioAtendimento = horarioAtendimento;

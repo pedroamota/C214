@@ -1,5 +1,7 @@
 package main;
 
 public interface AtendimentoService {
-    int predioAtendimento(int sala);
+    public int predioAtendimento(int sala);
+
+    public Professor buscaProfessores(String professor);
 }
