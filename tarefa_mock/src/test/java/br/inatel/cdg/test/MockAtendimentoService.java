@@ -35,6 +35,12 @@ public class MockAtendimentoService implements AtendimentoService{
             professor = ProfessorConst.SONED;
          }else if(nomeProfessor == "Chris"){
             professor = ProfessorConst.CHRIS;
+         }else if(nomeProfessor == "Chris"){
+            professor = ProfessorConst.RENZO;
+         }else if(nomeProfessor == "Chris"){
+            professor = ProfessorConst.KIKO;
+         }else if(nomeProfessor == "Chris"){
+            professor = ProfessorConst.VITORIA;
          }else{
             throw new UnsupportedOperationException("Não existe esse professor no INATEL");
          }
