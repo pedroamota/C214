@@ -40,6 +40,45 @@ public class TestAtendimento {
         assertEquals(1, professor.getSala());
     }
 
+    @Test
+    public void testBuscaProfessores() {
+        Mockito.when(servico.buscar("Vitoria")).thenReturn(ProfessorConst.VITORIA);
+
+        Professor professor = servico.buscarProfessores("Vitoria");
+
+        // Verificações
+        assertEquals("Vitoria", professor.getNomeProfessor());
+        assertEquals("19:30-21:10", professor.getHorarioAtendimento());
+        assertEquals("noturno", professor.getPeriodo());
+        assertEquals(2, professor.getSala());
+    }
+
+    @Test
+    public void testBuscaProfessores() {
+        Mockito.when(servico.buscar("Kiko")).thenReturn(ProfessorConst.KIKO);
+
+        Professor professor = servico.buscarProfessores("Kiko");
+
+        // Verificações
+        assertEquals("Kiko", professor.getNomeProfessor());
+        assertEquals("13:30-15:10", professor.getHorarioAtendimento());
+        assertEquals("integral", professor.getPeriodo());
+        assertEquals(3, professor.getSala());
+    }
+
+    @Test
+    public void testBuscaProfessores() {
+        Mockito.when(servico.buscar("Renzo")).thenReturn(ProfessorConst.RENZO);
+
+        Professor professor = servico.buscarProfessores("Renzo");
+
+        // Verificações
+        assertEquals("Renzo", professor.getNomeProfessor());
+        assertEquals("21:30-23:10", professor.getHorarioAtendimento());
+        assertEquals("noturno", professor.getPeriodo());
+        assertEquals(4, professor.getSala());
+    }
+
 
      @Test
      public void testBuscaProfessoresError() {
