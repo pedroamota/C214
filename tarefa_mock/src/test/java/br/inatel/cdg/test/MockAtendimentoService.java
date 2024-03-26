@@ -20,6 +20,8 @@ public class MockAtendimentoService implements AtendimentoService{
             predio = 2;
         } else if (sala >= 1) {
             predio = 1;
+        }else{
+            predio = -1;
         }
 
         return predio;
