@@ -88,6 +88,24 @@ public class TestAtendimento {
      
      assertEquals(null , professor);
      }
+
+     @Test
+     public void testBuscaProfessoresError() {
+     Mockito.when(atendimentoService.busca("Renzo")).thenReturn(ProfessorConst.RENZO);
+
+     Professor professor = buscaAtendimento.buscaProfessores("Soned");
+     
+     assertEquals(null , professor);
+     }
+
+     @Test
+     public void testBuscaProfessoresError() {
+     Mockito.when(atendimentoService.busca("Vitoria")).thenReturn(ProfessorConst.RENZO);
+
+     Professor professor = buscaAtendimento.buscaProfessores("Victoria");
+     
+     assertEquals(null , professor);
+     }
      
 
     @Test
