@@ -23,8 +23,9 @@ public class TestAtendimento {
     private BuscaAtendimento buscaAtendimento;
 
     @Before
-    public void setup(){
+    public void setup() {
         buscaAtendimento = new BuscaAtendimento(atendimentoService);
+
     }
 
     @Test
@@ -33,10 +34,90 @@ public class TestAtendimento {
 
         Professor professor = buscaAtendimento.buscaProfessores("Soned");
 
-        // Verificações
         assertEquals("Soned", professor.getNomeProfessor());
         assertEquals("10:00-11:40", professor.getHorarioAtendimento());
         assertEquals("integral", professor.getPeriodo());
         assertEquals(1, professor.getSala());
+    }
+
+
+     @Test
+     public void testBuscaProfessoresError() {
+     Mockito.when(atendimentoService.busca("Soned")).thenReturn(ProfessorConst.SONED);
+
+     Professor professor = buscaAtendimento.buscaProfessores("Rafael");
+     
+     assertEquals(null , professor);
+     }
+     
+
+    @Test
+    public void testPredioAtendimento1() {
+        Mockito.when(atendimentoService.busca("Soned")).thenReturn(ProfessorConst.SONED);
+        Professor professor = buscaAtendimento.buscaProfessores("Soned");
+
+        int predio = buscaAtendimento.verificaAtendimento(professor.getSala());
+
+        assertEquals(0, predio);
+    }
+
+    @Test
+    public void testPredioAtendimento2() {
+        Mockito.when(atendimentoService.busca("Soned")).thenReturn(ProfessorConst.SONED);
+        Professor professor = buscaAtendimento.buscaProfessores("Soned");
+
+        int predio = buscaAtendimento.verificaAtendimento(professor.getSala());
+
+        assertEquals(0, predio);
+    }
+
+    @Test
+    public void testPredioAtendimento3() {
+        Mockito.when(atendimentoService.busca("Soned")).thenReturn(ProfessorConst.SONED);
+        Professor professor = buscaAtendimento.buscaProfessores("Soned");
+
+        int predio = buscaAtendimento.verificaAtendimento(professor.getSala());
+
+        assertEquals(0, predio);
+    }
+
+    @Test
+    public void testPredioAtendimento4() {
+        Mockito.when(atendimentoService.busca("Soned")).thenReturn(ProfessorConst.SONED);
+        Professor professor = buscaAtendimento.buscaProfessores("Soned");
+
+        int predio = buscaAtendimento.verificaAtendimento(professor.getSala());
+
+        assertEquals(0, predio);
+    }
+
+    @Test
+    public void testPredioAtendimento5() {
+        Mockito.when(atendimentoService.busca("Soned")).thenReturn(ProfessorConst.SONED);
+        Professor professor = buscaAtendimento.buscaProfessores("Soned");
+
+        int predio = buscaAtendimento.verificaAtendimento(professor.getSala());
+
+        assertEquals(0, predio);
+    }
+
+    @Test
+    public void testPredioAtendimento6() {
+        Mockito.when(atendimentoService.busca("Soned")).thenReturn(ProfessorConst.SONED);
+        Professor professor = buscaAtendimento.buscaProfessores("Soned");
+
+        int predio = buscaAtendimento.verificaAtendimento(professor.getSala());
+
+        assertEquals(0, predio);
+    }
+
+    @Test
+    public void testPredioAtendimentoError() {
+        Mockito.when(atendimentoService.busca("Soned")).thenReturn(ProfessorConst.SONED);
+        Professor professor = buscaAtendimento.buscaProfessores("Soned");
+
+        int predio = buscaAtendimento.verificaAtendimento(professor.getSala());
+
+        assertEquals(0, predio);
     }
 }
